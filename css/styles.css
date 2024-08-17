@@ -1,0 +1,397 @@
+h1 {
+  color: red;
+}
+
+ul {
+  transform: matrix();
+}
+
+/*# sourceMappingURL=styles.css.map */
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables CSS */
+:root {
+    --color-terciario: #327A4C;
+    --color-secundario: #481800;
+    --color-primario: #c8c8c8;
+}
+
+/* Estilos para el cuerpo */
+body {
+    background-color: var(--color-primario);
+    background-image: url('https://image.shutterstock.com/image-vector/coffee-cup-seamless-pattern-background-260nw-546894570.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: var(--color-terciario);
+    padding: 3.4rem;
+    text-align: center;
+    color: aliceblue;
+    position: relative;
+    z-index: 10;
+}
+a:visited, 
+a:hover, 
+a:active,a {
+    color: inherit; /* Mantiene el color heredado para todos los estados */
+    text-decoration: none; /* Mantiene el texto sin subrayado */
+}
+/* Estilos para la lista de navegación */
+ul { 
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para los enlaces */
+a:visited { 
+    color: aliceblue;
+}
+
+
+/* Estilos para los títulos */
+h1 {
+    color: var(--color-secundario);
+    text-align: center;
+    margin: 2rem 0;
+}
+
+section h2 {
+    color: var(--color-secundario);
+    text-align: center;
+    margin: 2rem 0;
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: var(--color-terciario);
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}
+
+/* Estilos para el menú hamburguesa */
+.hamburger-menu {
+    --bar-width: 60px;
+    --bar-height: 8px;
+    --hamburger-gap: 6px;
+    --foreground: #333;
+    --background: white;
+    --hamburger-margin: 8px;
+    --animation-timing: 200ms ease-in-out;
+    --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+    --x-width: calc(var(--hamburger-height) * 1.41421356237);
+  
+    display: flex;
+    flex-direction: column;
+    gap: var(--hamburger-gap);
+    width: max-content;
+    position: absolute;
+    top: var(--hamburger-margin);
+    left: var(--hamburger-margin);
+    z-index: 100; /* Asegura que el menú esté por encima de otros elementos */
+    cursor: pointer;
+}
+
+.hamburger-menu:has(input:checked) {
+    --foreground: white;
+    --background: #333;
+}
+
+.hamburger-menu:has(input:focus-visible)::before,
+.hamburger-menu:has(input:focus-visible)::after,
+.hamburger-menu input:focus-visible {
+    border: 1px solid var(--background);
+    box-shadow: 0 0 0 1px var(--foreground);
+}
+
+.hamburger-menu::before,
+.hamburger-menu::after,
+.hamburger-menu input {
+    content: "";
+    width: var(--bar-width);
+    height: var(--bar-height);
+    background-color: var(--foreground);
+    border-radius: 9999px;
+    transform-origin: left center;
+    transition: opacity var(--animation-timing), width var(--animation-timing),
+        rotate var(--animation-timing), translate var(--animation-timing),
+        background-color var(--animation-timing);
+}
+
+.hamburger-menu input {
+    appearance: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    pointer-events: none;
+}
+
+.hamburger-menu:has(input:checked)::before {
+    rotate: 45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / -2);
+}
+
+.hamburger-menu:has(input:checked)::after {
+    rotate: -45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / 2);
+}
+
+.hamburger-menu input:checked {
+    opacity: 0;
+    width: 0;
+}
+
+/* Estilos para la barra lateral */
+.sidebar {
+    transition: translate var(--animation-timing);
+    translate: -100%;
+    padding: 0.5rem 1rem;
+    padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
+    background-color: rgb(43, 57, 43);
+    color: var(--color-primario);
+    min-width: 15rem;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 12;
+}
+
+.hamburger-menu:has(input:checked) + .sidebar {
+    translate: 0;
+}
+
+.sidebar-nav { 
+    margin-top: 7rem;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    z-index: 0;
+}
+
+/* Estilos para el logo en el header */
+
+    .logo-header {
+        position: absolute;
+        left: 1rem; /* Espacio desde el borde izquierdo */
+        top: ; /* Centra verticalmente en relación al header */
+        transform: translateY(-50%); /* Asegura el centrado vertical */
+        max-width: 150px; /* Ajusta el tamaño máximo del logo */
+        height: auto; /* Mantiene la proporción del logo */
+    }
+
+.image-container {
+    position: relative;
+    margin-top: 0%; /* Ajusta según sea necesario */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra suave alrededor del contenedor */
+    overflow: hidden; /* Asegura que la sombra no afecte elementos fuera del contenedor */
+    height: calc(100vh - 80px); /* Calcula la altura del contenedor restando la altura del header */
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra todo el contenedor */
+    display: block;
+}
+
+.image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    z-index: 9;
+    pointer-events: none; /* Para que el gradiente no interfiera con la interacción del usuario */
+}
+
+.image-container .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 70px;
+    z-index: 10; /* Asegura que el texto esté por encima del gradiente */
+}
+/* Estilos para la imagen de WhatsApp flotante */
+.wpp {
+    width: 70px; /* Ajusta el ancho de la imagen */
+    height: 70px; /* Ajusta la altura de la imagen */
+    position: fixed; /* Fija la imagen en una posición */
+    bottom: 20px; /* Ajusta la posición desde la parte inferior de la pantalla */
+    right: 20px; /* Ajusta la posición desde la derecha de la pantalla */
+    z-index: 1000; /* Asegura que la imagen esté por encima de otros elementos */
+    cursor: pointer; /* Cambia el cursor al pasar sobre la imagen */
+}
+.icons{ 
+    margin-left: 9%;
+    transform: translateY(5px);
+}
+.tomatoe, .farm, .land {
+    width: 360px; /* Ancho fijo */
+    height: 220px; /* Altura fija */
+    border-radius: 3%;
+    position: relative;
+    margin-top: 5%;
+    display: inline-block;
+    margin-inline: 1%;
+    object-fit: cover;
+  }
+  .land1{ 
+    margin-left: 30%;
+    width: 40%;
+  }
+    ol{ 
+       text-align: center   
+    }
+   
+    picture { 
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+      }
+   h1{ 
+ 
+   
+    
+    position: relative;
+    margin-top: 0%;
+    text-align: center;
+    
+   }
+   h2{ 
+    text-align: center;
+    margin-top: 10%;
+    
+    
+   }
+   .tomatoe2{ 
+    width: 30%;
+    border-radius: 3%;
+    position: relative;
+    margin-bottom: 10%;
+    display: inline-block;
+   
+    margin-top: 3%;
+   }
+   aside{ 
+    text-align: center;
+    margin-bottom: 8%;
+    padding: 0 15%;
+    font-size: 18px;
+   }
+   h4{ 
+    margin-bottom: 3%;
+    font-size: 50px;
+    text-align: center;
+   }
+   .donate{ 
+    width: 20%;
+    margin-bottom: 4%;
+   }
+  footer {
+    background-color: #294c524e;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    width: 100%;
+    height: 5%;
+   
+}
+table img{ 
+    width: 300px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1em;
+    margin-top: 1EM;
+}
+
+thead {
+    background-color: tomato;
+    color: whitesmoke;
+}
+
+th, td {
+    padding: 0.5em;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+.map-container {
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%; /* Proporción del 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* Media Queries */
+@media (max-width: 600px) { 
+    .desk-ul {
+        display: none;
+    }
+    .logo-header {
+        left: 10px; /* Ajusta el espacio en pantallas pequeñas */
+        max-width: 100px; /* Reduce el tamaño del logo */
+        transform: translateY(-50%); /* Mantiene el centrado vertical */
+    }
+    header {
+        padding: 2rem;
+    }
+    .logo-header{ 
+        position: absolute;
+        margin-top: 0%;
+        margin-left: 80%;
+    }
+    .image-container .overlay-text{ 
+        text-align: center;
+    }
+}
+
+@media (min-width: 600px) { 
+    .sidebar,
+    .sidebar-nav,
+    .hamburger-menu::after,
+    .hamburger-menu::before,
+    .hamburger-menu:has(input:checked),
+    .hamburger-menu:has(input:checked)::after,
+    .hamburger-menu {
+        display: none;
+    }
+
+    
+}
