@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../styles.css" rel="stylesheet">
+    <style>
+      
+        
+        .map-container {
+            position: relative;
+            height: 0;
+            padding-bottom: 56.25%; /* Proporción del 16:9 */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+        }
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <label class="hamburger-menu">
+        <input type="checkbox" />
+    </label>
+    <aside class="sidebar">
+        <nav class="sidebar-nav">
+            <div><a href="../index.html">Inicio</a></div>
+            <div><a href="./sobre nosotros/index.html">Sobre nosotros</a></div>
+            <div><a href="#">Productos</a></div>
+            <div><a href="#">Contacto</a></div>
+        </nav>
+    </aside>
+    <header>
+        
+        <nav>
+        
+            <ul class="desk-ul">
+                <img class="logo-header" src="../images/cafefrandorlogo.png">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./sobre nosotros/index.html">Sobre nosotros</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="my-4">Sobre Nosotros</h1>
+                <p>Bienvenido a nuestra sección de "Sobre Nosotros". Aquí encontrarás información sobre nuestra empresa y cómo puedes encontrarnos.</p>
+                
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3301.694842138334!2d-58.52950768478355!3d-34.4644394806064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb53d5008f137%3A0x4c8dfc6ae3a03de!2sSan%20Isidro%2C%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1609477190774!5m2!1ses!2sar" 
+                            frameborder="0" 
+                            allowfullscreen="" 
+                            aria-hidden="false" 
+                            tabindex="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+    <br>
+    <footer>
+        <p>&copy; 2024 Cafe Frandor. Todos los derechos reservados.</p>
+    </footer>
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
