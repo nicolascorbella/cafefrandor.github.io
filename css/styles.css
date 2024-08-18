@@ -84,6 +84,11 @@ footer {
     padding: 1rem;
     margin-top: auto;
 }
+table{ color:black;
+font-size: large;}
+td{ 
+    max-width: 2rem;
+}
 
 /* Estilos para el menú hamburguesa */
 .hamburger-menu {
@@ -331,7 +336,7 @@ table {
 }
 
 thead {
-    background-color: tomato;
+    background-color: rgb(83, 36, 115);
     color: whitesmoke;
 }
 
